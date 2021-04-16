@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Nambikkai</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer="true"></script>
+  <script src="https://kit.fontawesome.com/640e40826c.js" crossorigin="anonymous"></script>
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@800&display=swap" rel="stylesheet">
+</head>
+<body>
+  <nav class="navbar">
+    <div class="navbarDiv"><img src="images/logo.png" alt="" srcset=""></div>
+    <a href="#" class="toggle-hamburger">
+      <span class="bar"></span>
+      <span class="bar"></span>
+      <span class="bar"></span>
+    </a>
+    <div class="navbar-links">
+      <ul>
+        <li><a href="#home-section">Home</a></li>
+        <li><a href="#mission-section">Mission</a></li>
+        <li><a href="#event-section">Events</a></li>
+        <li><a href="#donation-section">Donation</a></li>
+       
+      </ul>
+    </div>
+  </nav>
+  
+  <div class="slider" id="home-section">
+    <figure>
+      <img src="images/1.jpg" alt="">
+      <img src="images/2.jpg" alt="">
+      <img src="images/5.jpg" alt="">
+      <img src="images/6.jpg" alt="">
+    </figure>
+  </div>
+
+<section class="mission" id="mission-section">
+  <h1><span class="first-word">Nambikkai</span><span class="second-word">'s Mission</span> </h1>
+  <div class="mission-text">
+    <p>To encourage underprivileged children to enter professional fields when they grow up - and equip them with the skills and technology that will help them achieve success.</p>
+  </div>
+
+  <div class="mission-home">
+    <div class="add-border-top"></div>
+    <h3>Sai Pandian Children's Home</h3>
+    <div class="add-border-bottom"></div>
+    <iframe  src="https://www.youtube.com/embed/8zoVoFHVv0g" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+    
+    <div class="mission-home-text">
+      <p>The home was founded in 2011, and has since then taken about 70 children under their care. At the moment they house 23 children, aged 1 up to 21. Being a small establishment, they do not get grants from the government; rather, they rely on the generosity of the neighborhood to get by</p>
+    </div>
+    
+  </div>
+</section>
+
+<section class="events" id="event-section">
+  <h1><span class="second-word">Schedul</span><span class="first-word">ed Events</span> </h1>
+
+  <div class="event-container">
+    <div class="upcoming-event">
+        <img src="images/event1.jpeg" alt="" srcset="">
+    </div>
+  </div>
+</section>
+
+<section class="donation" id="donation-section">
+  <h1><span class="second-word">How Can</span> <span class="first-word">You Help?</span> </h1>
+  <div class="payment-section">
+    <h3>Purpose Of Donation</h3>
+    <div class="ngo-logo">
+      <img src="images/nambikkai2.jpeg" alt="">
+    </div>
+    <div class="donation-information">
+      <p>Donated To : Nambikkai</p>
+    </div>
+
+    <div class="donation-information">
+      <p>For: Laptop Purchase</p>
+    </div>
+
+    <div class="donation-information">
+      <p> Fixed Amount: RM20 </p>
+    </div>
+    <form action="/charge" method="POST">
+    <script 
+    src="https://checkout.stripe.com/checkout.js"
+    class = "stripe-button"
+    data-key="{{stripePublishableKey}}"
+    data-amount = "RM 2000"
+    data-name="Arun"
+    data-description="Nambikkai"
+    data-image = "images/marketplace.png"
+    data-locale = "auto"
+    >
+
+    </script>
+    <script>
+      document.getElementsByClassName('stripe-button-el')[0].style.display = "none"
+    </script>
+
+       <button class="process-payment" id="process-button">Click To Donate</button>
+  </form>
+ 
+   
+  </div>
+</section>
+<script src="https://unpkg.com/swiper/swiper-bundle.js"></script>
+{{{body}}}
+</body>
+</html>
