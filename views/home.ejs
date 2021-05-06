@@ -13,25 +13,9 @@
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@800&display=swap" rel="stylesheet">
 </head>
 <body>
-  <nav class="navbar">
-    <div class="navbarDiv"><img src="images/logo.png" alt="" srcset=""></div>
-    <a href="#" class="toggle-hamburger">
-      <span class="bar"></span>
-      <span class="bar"></span>
-      <span class="bar"></span>
-    </a>
-    <div class="navbar-links">
-      <ul>
-        <li><a href="#home-section">Home</a></li>
-        <li><a href="#mission-section">Mission</a></li>
-        <li><a href="#event-section">Events</a></li>
-        <li><a href="#donation-section">Donation</a></li>
-       
-      </ul>
-    </div>
-  </nav>
+  <%- include('partials/nav.ejs') %> 
   
-  <div class="slider" id="home-section">
+<div class="slider" id="home-section">
     <figure>
       <img src="images/1.jpg" alt="">
       <img src="images/2.jpg" alt="">
@@ -55,7 +39,6 @@
     <div class="mission-home-text">
       <p>The home was founded in 2011, and has since then taken about 70 children under their care. At the moment they house 23 children, aged 1 up to 21. Being a small establishment, they do not get grants from the government; rather, they rely on the generosity of the neighborhood to get by</p>
     </div>
-    
   </div>
 </section>
 
@@ -69,48 +52,5 @@
   </div>
 </section>
 
-<section class="donation" id="donation-section">
-  <h1><span class="second-word">How Can</span> <span class="first-word">You Help?</span> </h1>
-  <div class="payment-section">
-    <h3>Purpose Of Donation</h3>
-    <div class="ngo-logo">
-      <img src="images/nambikkai2.jpeg" alt="">
-    </div>
-    <div class="donation-information">
-      <p>Donated To : Nambikkai</p>
-    </div>
-
-    <div class="donation-information">
-      <p>For: Laptop Purchase</p>
-    </div>
-
-    <div class="donation-information">
-      <p> Fixed Amount: RM20 </p>
-    </div>
-    <form action="/charge" method="POST">
-    <script 
-    src="https://checkout.stripe.com/checkout.js"
-    class = "stripe-button"
-    data-key="{{stripePublishableKey}}"
-    data-amount = "RM 2000"
-    data-name="Nambikkai"
-    data-description="Nambikkai"
-    data-image = "images/marketplace.png"
-    data-locale = "auto"
-    >
-
-    </script>
-    <script>
-      document.getElementsByClassName('stripe-button-el')[0].style.display = "none"
-    </script>
-
-       <button class="process-payment" id="process-button">Click To Donate</button>
-  </form>
- 
-   
-  </div>
-</section>
-<script src="https://unpkg.com/swiper/swiper-bundle.js"></script>
-{{{body}}}
 </body>
 </html>

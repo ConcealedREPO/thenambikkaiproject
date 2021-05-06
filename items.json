@@ -1,0 +1,40 @@
+{
+  "smallCurrency": [
+    {
+      "id": 1,
+      "name": "MYR 1",
+      "price": 100,
+      "imgName": "rm1.jpeg"
+    },
+    {
+      "id": 2,
+      "name": "MYR 5",
+      "price": 500,
+      "imgName": "rm5.jpeg"
+    },
+    {
+      "id": 3,
+      "name": "MYR 10",
+      "price": 1000,
+      "imgName": "rm10.jpeg"
+    },
+    {
+      "id": 4,
+      "name": "MYR 20",
+      "price": 2000,
+      "imgName": "rm20.jpeg"
+    },
+    {
+      "id": 5,
+      "name": "MYR 50",
+      "price": 5000,
+      "imgName": "rm50.jpeg"
+    },
+    {
+      "id": 6,
+      "name": "MYR 100",
+      "price": 10000,
+      "imgName": "rm100.jpeg"
+    }
+  ]
+}

@@ -69,7 +69,6 @@ body{
   display:block;
 }
 
-
 .toggle-hamburger{
   position: absolute;
   top: 1.75rem;
@@ -148,7 +147,7 @@ body{
 
 /*Mission section*/
 
-.mission,.events,.donation{
+.mission,.events{
   text-align:center;
   background-color: #532ecf;
   padding-bottom:1rem;
@@ -164,11 +163,11 @@ body{
 }
 
 .first-word{
-  border-top: 0.2rem solid #2ecf78
+  border-top: 0.3rem solid #2ecf78
 }
 
 .second-word{
-  border-bottom: 0.2rem solid #2ecf78
+  border-bottom: 0.3rem solid #2ecf78
 }
 
 .mission-text{
@@ -194,7 +193,7 @@ body{
 
 .add-border-bottom,.add-border-top{
   margin: .2rem auto 2rem auto;
-  width:50%;
+  width:95%;
   border-bottom: 0.2rem solid #2ecf78;
 }
 
@@ -242,59 +241,232 @@ body{
   height: 100%;  
 }
 
-.donation h1{
-  margin-bottom: 5rem;
+/*Donation Page */
+.donation{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  text-align:center;
+  background-color: #532ecf;
+  padding-bottom:1rem;
+  border-bottom: 0.2rem solid #2ecf78;
 }
 
-/*Payment Section*/
-.payment-section{
-  font-family: "Inter", sans-serif;
-  color: white;
+.donation h1{
+  margin-bottom: 1rem;
+}
+
+.container{
+  margin: 1rem auto 0 auto;
   width: 90%;
-  margin: 2rem auto 2rem auto;
-  border: 0.2rem solid #2ecf78;
+}
+
+.section-header{
+  font-family: 'Inter', sans-serif;
+  color:white;
+  font-size: 1.5rem;
+}
+
+.shop-items{
+  justify-content: center;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.shop-item {
+  justify-content: center;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.shop-item-title {
+  width: 100%;
+  font-family: 'Inter', sans-serif;
+  color:white; 
+  margin-bottom: .5rem; 
+  font-size: 1.2rem
+}
+
+.shop-item-image {
+  width: 60%;
+  object-fit: cover;
+  margin-bottom: 1rem;
+}
+
+.shop-item-details {
+  width: 100%;
+  margin-bottom: 2rem;  
+}
+
+.shop-item-price {
+  font-family: 'Inter', sans-serif;
+  color:white; 
+  margin: 0 1rem 0 0;
+  font-size: 1.2rem;
+  width: 80%;
+}
+
+.btn-primary {
+  border: none;
+  cursor: pointer;
+  border-radius: 20px;
+  width: 40%;
+  background: #2ecf78;
+  padding: .2rem;
+  font-size: 1.5rem;
+  color: white;
+  font-family: 'Inter', sans-serif;
+}
+
+#donation-confirmation{
+  margin: 2rem auto 0 auto;
+  width: 90%;
+  border:.3rem solid #2ecf78;
   border-radius: 20px;
 }
 
-.payment-section h3{
-  margin-top:2rem;
+#donation-confirmation .add-border-bottom{
+  width: 100%;
+  margin: .2rem auto 1rem auto;
 }
 
-.payment-section div{
+.cart-header {
+  font-weight: bold;
+  font-size: 1.2rem;
+  color: white;
+  font-family: 'Inter', sans-serif;
+  text-align:center;
+}
+
+.cart-column {
   display: flex;
+  align-items: center;
+  padding-bottom: 1rem;
+  margin-top: 1rem;
+  margin-right: 1rem;
+}
+
+.cart-row {
+ display: flex;
+ justify-content: space-evenly;
+ justify-content: center;
+}
+
+.cart-item {
+  width: 30%;
   justify-content: center;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.cart-price {
+  width: 20%;
+  font-size:1.2rem;
+  color: white;
+  font-family: 'Inter', sans-serif;
+
+}
+
+.cart-quantity {
+  text-align:center;
+  width: 40%;
+}
+
+.cart-item-title {
+   color: white;
+   font-size: .9rem;
+   margin-top: 1rem;
+   width: 100%;
+   font-family: 'Inter', sans-serif;
+}
+
+.cart-item-image {
+   width: 80%;
+   height: 3rem;
+}
+
+.btn-danger {
+    color: white;
+    cursor: pointer;
+    background-color: salmon;
+    border: none;
+    border-radius: 10px;
+    padding: .5rem
+}
+
+.cart-quantity-input {
+    height: 2rem;
+    width: 2.5rem;
+    margin-left: .5rem;
+    margin-right: .5rem;
+}
+
+.cart-total {
+    font-size: 1.2rem;
+    padding-top: 2rem;
+    margin-top: 1rem;
+    font-family: "Inter",sans-serif;
+    color: white;
+    border-top: .3rem solid #2ecf78;
+}
+
+.cart-total-price {
+  margin-left: 1rem;
+}
+
+.form{
+  margin: 1rem auto;
+  border-top: .3rem solid #2ecf78;
+  border-bottom: .3rem solid #2ecf78;
+  width: 90%;
+  height:10rem;
+  font-family: "Inter",sans-serif;
+  color: white;
+}
+
+.form-header{
+  font-size: 1.2rem;
+}
+
+.form input{
+  margin-left: .5rem;
+  width: 60%;
+  border: none;
+  border-bottom: .3rem solid #2ecf78;
+  background-color: #532ecf;
+  text-align: center;
+  color: white;
+}
+
+.form form{
   margin-top: .5rem;
 }
 
-.ngo-logo{
-  width: 8rem;
-  height: 8rem;
-  margin:0 auto;
-  border-radius: 50%;
-  border: 0.2rem solid #2ecf78;
+.permission{
+  margin-top: 2rem;
+  display: flex;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+  font-size: .8rem
 }
 
-.ngo-logo img{
-  object-fit: contain;
-  border-radius: 50%;;
+.permission label{
+  width: 35%;
 }
 
-.donation-information{
-  letter-spacing: 1px;
-  font-size: 0.8rem;
-  margin: 0 auto;
+.permission-question{
+  font-size:.5rem
 }
 
-.payment-section button{
-  margin: 2rem 0;
-  background-color: #2ecf78;
-  color: white;
-  border:none;
-  width:9rem;
-  height: 3rem;
-  border-radius: 20px;
-  font-family: "Roboto",sans-serif;
-  font-weight: bolder;
+.permission div{
+  display: flex;
+}
+
+.btn-purchase {
+  width: 12rem;
+  font-size: 1rem;
+  padding: 1rem;
+  margin:1rem 0 2rem 0;
 }
 
 @media(min-width: 640px){
@@ -365,17 +537,51 @@ body{
   /*Event Section*/
   .event-container div{
     width: 50%;
+  } 
+  
+  /* Form Section*/
+  .form{
+    width: 55%;
   }
 
-  .payment-section{
-    width: 50%;
+  .permission-question{
+    font-size:.8rem
   }
 
-  .donation-information{
-    font-size: 1rem;
-    margin: 0 auto;
+  /*donation-page*/
+  .shop-item{
+    width: 45%;
   }
 
+  #donation-confirmation{
+    width: 70%;
+  }
+
+  .cart-header {
+    font-size: 1.5rem;
+  }
+
+  .cart-item {
+    width: 40%;
+  }
+
+  .cart-item-title {
+    font-size: rem;
+ }
+
+  .cart-item-image {
+    width: 60%;
+    height: 5rem;
+ }
+ 
+  .cart-price {
+    font-size:1.5rem;
+    width: 20%;
+  }
+  
+  .cart-quantity {
+    width: 30%;
+  }
 }
 
 @media (min-width:1024px) {
@@ -407,11 +613,28 @@ body{
     height: 25rem;
   }
 
-  .payment-section{
-    width: 40%;
+  /* Form Section*/
+  .form{
+    width: 45%;
   }
 
-  .donation-information{
-    font-size: 1.2rem;
+  .permission-question{
+    font-size:.8rem
   }
+
+  /*donation-page*/
+  .shop-item{
+    width: 30%;
+  }
+
+  #donation-confirmation{
+    width: 60%;
+  }
+
+  .cart-item-image {
+    height: 7rem;
+ }
 }
+
+
+
