@@ -15,6 +15,9 @@ app.get('/', (req,res) =>{
   res.render('home')
 })
 
+app.get('/events', (req,res) =>{
+  res.render('events')
+})
 
 app.get('/donation', function(req, res) {
   fs.readFile('items.json', function(error, data) {

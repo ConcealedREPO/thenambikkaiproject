@@ -147,7 +147,7 @@ body{
 
 /*Mission section*/
 
-.mission,.events{
+.mission{
   text-align:center;
   background-color: #532ecf;
   padding-bottom:1rem;
@@ -216,11 +216,21 @@ body{
 }
 
 /* Event Section */
+.events{
+  text-align:center;
+  background-color: #532ecf;
+  padding-bottom:1rem;
+  border-bottom: 0.2rem solid #2ecf78;
+  min-height: 60rem;
+}
+
 .event-container{
   display: flex;
   justify-content:  space-evenly;
   flex-wrap: wrap;
+  padding-bottom: 2rem;
   margin-bottom: 2rem;
+  border-bottom: 0.2rem solid #2ecf78
 }
 
 .event-container div{
@@ -228,6 +238,11 @@ body{
   width: 80%;
   height: 20rem;
   border: 0.2rem solid #2ecf78
+}
+
+.event-container .event-details{
+  margin-top: 0;
+  border: none;
 }
 
 .upcoming-event{
@@ -239,6 +254,65 @@ body{
 .upcoming-event img{
   width: 100%;
   height: 100%;  
+}
+
+.event-details{
+  margin-bottom: 5rem;
+}
+
+.event-details p{
+  color: white;
+  font-family: "Inter", sans-serif;   
+  text-align: left;
+  word-spacing: 3px;
+  line-height: 1.5;
+}
+
+.event-details .bank-details, .event-details .event-information{
+  font-size: .8rem;
+  color: black;
+  background-color: #2ecf78;
+  padding: 1rem;
+  border: .15rem solid black;
+  border-radius: 20px;
+}
+
+.event-container .sign-up-link, .event-container .video-link{
+  margin-top: 3rem;
+  height: 0;
+  border: none;
+  margin-bottom: 5rem;
+}
+
+.event-container button{
+  margin-top: 2rem;
+  font-size: 1rem;
+  width: 12rem; 
+  padding: 1rem;
+}
+
+.event-container button a{
+  text-decoration:none;
+  color: white;
+  border: 1px solid black;
+  display: block;
+}
+
+.events .rocky-event{
+  padding-bottom: 45rem;
+}
+
+.event-container .past-event{
+  width: 80%;
+}
+
+.past-event img{
+  width: 100%;
+  height: 100%;
+}
+
+.event-container .video-link{
+  margin: 0 auto;
 }
 
 /*Donation Page */
@@ -414,59 +488,21 @@ body{
   margin-left: 1rem;
 }
 
-.form{
-  margin: 1rem auto;
-  border-top: .3rem solid #2ecf78;
-  border-bottom: .3rem solid #2ecf78;
-  width: 90%;
-  height:10rem;
-  font-family: "Inter",sans-serif;
-  color: white;
-}
-
-.form-header{
-  font-size: 1.2rem;
-}
-
-.form input{
-  margin-left: .5rem;
-  width: 60%;
-  border: none;
-  border-bottom: .3rem solid #2ecf78;
-  background-color: #532ecf;
-  text-align: center;
-  color: white;
-}
-
-.form form{
-  margin-top: .5rem;
-}
-
-.permission{
-  margin-top: 2rem;
-  display: flex;
-  justify-content: space-evenly;
-  flex-wrap: wrap;
-  font-size: .8rem
-}
-
-.permission label{
-  width: 35%;
-}
-
-.permission-question{
-  font-size:.5rem
-}
-
-.permission div{
-  display: flex;
-}
-
 .btn-purchase {
   width: 12rem;
   font-size: 1rem;
   padding: 1rem;
   margin:1rem 0 2rem 0;
+}
+
+@media(max-width: 359px) and (orientation: portrait){
+  .event-container .sign-up-link{
+    margin-top: 10rem;
+  }
+
+  .events .rocky-event{
+    padding-bottom: 55rem;
+  }
 }
 
 @media(min-width: 640px){
@@ -534,20 +570,6 @@ body{
     font-size: 1.2rem;
   }
 
-  /*Event Section*/
-  .event-container div{
-    width: 50%;
-  } 
-  
-  /* Form Section*/
-  .form{
-    width: 55%;
-  }
-
-  .permission-question{
-    font-size:.8rem
-  }
-
   /*donation-page*/
   .shop-item{
     width: 45%;
@@ -565,14 +587,10 @@ body{
     width: 40%;
   }
 
-  .cart-item-title {
-    font-size: rem;
- }
-
   .cart-item-image {
     width: 60%;
     height: 5rem;
- }
+  }
  
   .cart-price {
     font-size:1.5rem;
@@ -582,7 +600,68 @@ body{
   .cart-quantity {
     width: 30%;
   }
+
+/* Event Section */
+  .event-container div{
+    width: 40%;
+  }
+
+  .event-container .upcoming-event{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    height: 25rem;
+    width: 45%;
+  }
+
+  .upcoming-event img{
+    width: 100%;
+    height: 100%;  
+  }
+
+  .event-container .event-details{
+    width: 50%;
+    margin-top: 1rem;
+    font-size: 0.9rem;
+  }
+
+  .event-details{
+    margin-bottom: 0;
+  }
+
+  .event-details .bank-details{
+    font-size: .9rem;
+    width: 90%;
+    margin: 0 auto;
+  }
+
+  .event-container .sign-up-link{
+    margin-top: 1rem;
+  }
+
+  .events .rocky-event{
+    padding-bottom: 20rem;
+  }
+
+  .events .rocky-event .upcoming-event{
+    width: 80%;
+  }
+
+  .events .rocky-event .event-details{
+    width: 80%;
+  }
+
+  .event-container .past-event{
+    width: 65%;
+    height: 25rem
+  }
+
+  .past-event img{
+    width: 100%;
+    height: 100%;
+  }
 }
+
 
 @media (min-width:1024px) {
   .slider{
@@ -608,20 +687,6 @@ body{
     font-size: 1.2rem;
   }
 
-  .event-container div{
-    width: 40%;
-    height: 25rem;
-  }
-
-  /* Form Section*/
-  .form{
-    width: 45%;
-  }
-
-  .permission-question{
-    font-size:.8rem
-  }
-
   /*donation-page*/
   .shop-item{
     width: 30%;
@@ -634,7 +699,46 @@ body{
   .cart-item-image {
     height: 7rem;
  }
-}
+ /*Event Section*/
+  .event-container .upcoming-event{
+    width: 35%;
+  }
+  .event-container .event-details{
+    width: 45%;
+  }
 
+  .event-container .event-details{
+    font-size: 1rem;
+    
+  }
+
+  .event-details{
+    margin-bottom: 0;
+  }
+
+  .event-details .bank-details{
+    font-size: 1rem;
+  }
+
+  .events .rocky-event .upcoming-event{
+    width: 40%;
+  }
+
+  .events .rocky-event .event-details{
+    width: 65%;
+  }
+
+  .event-details .event-information{
+    width: 60%;
+    height: 10rem;
+    font-size: 1rem;
+    margin: 0 auto;
+  }
+
+  .event-container .past-event{
+    width: 40%;
+    height: 30rem
+  }
+}
 
 
