@@ -33,6 +33,9 @@ function ready() {
 let stripeHandler = StripeCheckout.configure({
   key: stripePublicKey,
   locale: 'en',
+  currency: 'myr',
+  image: "images/marketplace.png",
+  description: "The Nambikkai Project",
   token: function(token) {
     let items = []
     let cartItemContainer = document.querySelector('.cart-items')
