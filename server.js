@@ -19,6 +19,10 @@ app.get('/events', (req,res) =>{
   res.render('events')
 })
 
+app.get('/reports', (req,res) =>{
+  res.render('reports')
+})
+
 app.get('/donation', function(req, res) {
   fs.readFile('items.json', function(error, data) {
     if (error) {

@@ -10,6 +10,7 @@ html{
 body{
   margin: 0;
   padding:0;
+  background-color : #532ecf;
 }
 /* Mobile Version*/
 .navbar{
@@ -495,6 +496,48 @@ body{
   margin:1rem 0 2rem 0;
 }
 
+/*Report Page*/
+.report-container{
+  text-align:center;
+  background-color: #532ecf;
+  padding-bottom:1rem;
+}
+
+.report-container h1{
+  font-family: 'Inter', sans-serif;
+  color:white;
+  font-size: 1.5rem;
+  margin:0;
+  padding-top: 2rem;
+}
+
+.fr-container{
+  display:flex;
+  flex-wrap:wrap;
+  font-family: 'Inter', sans-serif;
+  color:white;
+  font-size: .8rem;
+}
+
+.fr-heading{
+  text-align: center;
+  margin-top: 1rem;
+  width: 100%;
+}
+
+.fr-heading span{
+  border-bottom: .2rem #2ecf78 solid;
+}
+
+.fr-details{
+  width: 80%;
+  font-size: 0.7rem;
+  margin: 0 auto;
+  text-align: left;
+  line-height: 1.5;
+  letter-spacing: 2px;
+}
+
 @media(max-width: 359px) and (orientation: portrait){
   .event-container .sign-up-link{
     margin-top: 10rem;
@@ -660,6 +703,36 @@ body{
     width: 100%;
     height: 100%;
   }
+
+    /*Report Page*/
+  .report-container h1{
+    font-size: 2rem;
+    padding-top: 2rem;
+  }
+
+  .fr-container{
+    margin-top: 2rem;
+    font-size: .8rem;
+  }
+
+  .fr-heading{
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    text-align: left;
+    margin: 0 auto;
+    width: 30%;
+    border-right: 0.2rem solid #2ecf78;
+  }
+
+  .fr-heading span{
+    border: none
+  }
+
+  .fr-details{
+    width: 60%;
+    font-size: .9rem;
+  }
 }
 
 
@@ -738,6 +811,24 @@ body{
   .event-container .past-event{
     width: 40%;
     height: 30rem
+  }
+
+  /*Report Page*/
+  .report-container h1{
+    font-size: 2rem;
+  }
+
+  .fr-container{
+    font-size: 1.1rem;
+  }
+
+  .fr-heading{
+    width: 35%;
+    border-right: 0.2rem solid #2ecf78;
+  }
+
+  .fr-details{
+    font-size: 1rem;
   }
 }
 
