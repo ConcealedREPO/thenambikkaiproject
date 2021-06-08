@@ -538,6 +538,10 @@ body{
   letter-spacing: 2px;
 }
 
+.fr-details p{
+  text-transform: none;
+}
+
 @media(max-width: 359px) and (orientation: portrait){
   .event-container .sign-up-link{
     margin-top: 10rem;
