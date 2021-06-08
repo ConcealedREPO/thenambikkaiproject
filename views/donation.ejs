@@ -12,9 +12,6 @@
   <script src="https://checkout.stripe.com/checkout.js" defer></script>
   <script>
       var stripePublicKey = '<%= stripePublicKey %>'
-      // function submit(){
-      //   document.querySelector('form')
-      // }
   </script>
   <script src="script.js" defer></script>
 </head>
@@ -38,45 +35,23 @@
     </div>
   </div>
 
-  <!-- <div class="form">
-    <h2 class="form-header">Consent Form</h2>
-    <form action="https://docs.google.com/forms/u/5/d/e/1FAIpQLScC11PJAT22O9EgrHaxQ1_cbLS0m4hRyGYiysb_LiakwQsMow/formResponse" id="form">
-      <div class="user-name">
-        <label for="userName">Name :</label>
-        <input type="text" name="entry.1065046570" id="userName" onchange="submit()">
-      </div>
-      <div class="permission">
-        <label for="permission" class="permission-question">remain anonymous?</label>
-        <div>
-          <input type="radio" name="entry.1166974658" id="permissionOption" checked>
-          <label for="permissionOption" >Yes</label>
-        </div>
-  
-        <div>
-          <input type="radio" name="entry.1166974658" id="permissionOption">
-          <label for="permissionOption">No</label>
-        </div>
-      </div>
-    </form>
-  </div> -->
-
-<div class="container" id="donation-confirmation">
-  <h2 class="section-header">Selected Items</h2>
-  <div class="add-border-bottom"></div>
-  <div class="cart-row">
-      <span class="cart-item cart-header cart-column">ITEM</span>
-      <span class="cart-price cart-header cart-column">PRICE</span>
-      <span class="cart-quantity cart-header cart-column">QUANTITY</span>
-  </div>
-
-  <div class="cart-items"> 
-  </div>
-    <div class="cart-total">
-        <strong class="cart-total-title">Total :</strong>
-        <span class="cart-total-price">RM0</span>
+  <div class="container" id="donation-confirmation">
+    <h2 class="section-header">Selected Items</h2>
+    <div class="add-border-bottom"></div>
+    <div class="cart-row">
+        <span class="cart-item cart-header cart-column">ITEM</span>
+        <span class="cart-price cart-header cart-column">PRICE</span>
+        <span class="cart-quantity cart-header cart-column">QUANTITY</span>
     </div>
-    <button class="btn-primary btn-purchase" type="button">Click to Donate</button>
-</div>
+
+    <div class="cart-items"> 
+    </div>
+      <div class="cart-total">
+          <strong class="cart-total-title">Total :</strong>
+          <span class="cart-total-price">RM0</span>
+      </div>
+      <button class="btn-primary btn-purchase" type="button">Click to Donate</button>
+  </div>
 </section>
 
 </body>
