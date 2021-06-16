@@ -5,12 +5,6 @@ if (document.readyState == 'loading') {
 }
 
 function ready() {
-  const toggleHamburger = document.querySelector(".toggle-hamburger")
-  const navbarLinks = document.querySelector(".navbar-links")
-  toggleHamburger.addEventListener("click",() =>{
-    navbarLinks.classList.toggle('active')
-  })
-
   let removeCartItemButtons = document.querySelectorAll('.btn-danger')
 
   for(let button of removeCartItemButtons){
@@ -73,13 +67,8 @@ let stripeHandler = StripeCheckout.configure({
 })
 
 function purchaseClicked() {
-  let userName = document.querySelector("#userName")
   let priceElement = document.getElementsByClassName('cart-total-price')[0]
   let price = parseFloat(priceElement.innerText.replace('RM', '')) * 100
-  
-  // if(userName.value === ""){
-  //   return alert("Complete the consent form before checkout")
-  // }
 
   if(price < 1){
     return alert("No item selected")
