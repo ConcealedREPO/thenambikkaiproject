@@ -19,7 +19,7 @@ const members = [
 
   {
     "memberId" : 3,
-    "member-image": "/images/adminPr.jpeg",
+    "member-image": "/images/adminPR.jpeg",
     "name": "Aabiraami Thillainathan",
     "role": "Administration and PR",
     "bio": 
