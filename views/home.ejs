@@ -1,46 +1,50 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Nambikkai</title>
-  <link rel="stylesheet" href="style.css">
-  <script src="navbar.js" defer></script>
-  <script src="https://kit.fontawesome.com/640e40826c.js" crossorigin="anonymous"></script>
-  <link rel="preconnect" href="https://fonts.gstatic.com">
-  <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.css" />
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@800&display=swap" rel="stylesheet">
-</head>
+<%- include('partials/header.ejs') %> 
+
 <body>
-  <%- include('partials/nav.ejs') %> 
-  
-<div class="slider" id="home-section">
-    <figure>
-      <img src="images/1.jpg" alt="">
-      <img src="images/2.jpg" alt="">
-      <img src="images/5.jpg" alt="">
-      <img src="images/6.jpg" alt="">
-    </figure>
-  </div>
+  <%- include('partials/navbar.ejs') %> 
 
-<section class="mission" id="mission-section">
-  <h1><span class="first-word">Nambikkai</span><span class="second-word">'s Mission</span> </h1>
-  <div class="mission-text">
-    <p>To encourage underprivileged children to enter professional fields when they grow up - and equip them with the skills and technology that will help them achieve success.</p>
-  </div>
+  <%- include('partials/checkout.ejs') %>
 
-  <div class="mission-home">
-    <div class="add-border-top"></div>
-    <h3>Sai Pandian Children's Home</h3>
-    <div class="add-border-bottom"></div>
-    <iframe  src="https://www.youtube.com/embed/8zoVoFHVv0g" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-    
-    <div class="mission-home-text">
-      <p>The home was founded in 2011, and has since then taken about 70 children under their care. At the moment they house 23 children, aged 1 up to 21. Being a small establishment, they do not get grants from the government; rather, they rely on the generosity of the neighborhood to get by</p>
+  <section class="mission-section">
+    <div class="image-grid">
+      <img src="/images/6.jpg" alt="" class="">
+      <img src="/images/7.jpg" alt="" class="">
+      <img src="/images/1.jpg" alt="" class="">
+      <img src="/images/4.jpg" alt="" class="">
     </div>
-  </div>
-</section>
-<%- include('partials/footer.ejs') %> 
+    <h1 class="title">Nambikkai's Mission</h1>
+
+    <div class="mission-container">
+      <div class="mission-description">
+        <p class="information">
+          The Nambikkai Project was started in March 2021 by Malaysian students, with the <span>aim of purchasing computers for children in local orphanages, and teaching them how to use them</span> – including recognising pieces of hardware, surfing the Internet, word processing, and introductory programming. The project has the <span>long-term goal of encouraging underprivileged children to enter professional fields</span> when they <span>grow up</span>, as well as raising awareness amongst the local community on the importance of digital literacy in the modern world.
+        </p>
+      </div>
+    </div>
+  
+    <div class="mission-buttons">
+      <button class="btn btn-donate payment" data-donate-button>Donate</button>
+      <button class="btn btn-video">Watch Video</button>
+    </div>
+  </section>
+  
+  <section class="sai-pandian">
+    <div class="sai-pandian-image">
+      <img src="/images/8.jpg" alt="">
+    </div>
+
+    <h1 class="title">Sai Pandian Children's Home</h1>
+
+    <div class="sai-pandian-description">
+      <p class="information">
+        Founded in <span>2011</span>, and has since then taken about <span>70</span> children under their care. At the moment they house <span>23</span> children, aged <span>1</span> up to <span>21</span>.
+      </p>
+      <p class="information">
+        Being a small foundation, <span>they do not get grants from the government</span>; rather, they <span>rely</span> on the <span>generosity of the neighbourhood</span> to get by.
+      </p>
+    </div>
+  </section>
+
+  <%- include('partials/footer.ejs') %> 
 </body>
 </html>

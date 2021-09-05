@@ -1,0 +1,1013 @@
+/* === Google Fonts === */
+@import url('https://fonts.googleapis.com/css2?family=Epilogue:wght@500;700;900&family=Inter:wght@700&display=swap');
+
+/* === Universal Adjustment Template === */
+*{
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  text-decoration: none;
+  list-style: none;
+}
+
+/* === Variable CSS === */
+:root{
+  /* === Typography === */
+  --logo-font : "Inter", sans-serif;
+  --primary-font: "Epilogue";
+
+  /* === COLORS ===*/
+  --primary-color: hsl(254,64%,45%);
+  --secondary-color: hsl(148,64%,50%);
+  --complimentary-color: hsl(252,60%,89%);
+  --footer-color: hsl(218,45%,23%);
+  --event-color: hsl(350,98%,55%);
+}
+
+/* === Mobile Screen === */
+
+/* === Common CSS ===*/
+.logo{
+  padding: .5rem 1rem;
+  font-family: var(--logo-font);
+  font-size: .75rem;
+  line-height: 1.5rem;
+  color: white;
+}
+
+.logo .dot{
+  font-size: 2.5rem;
+  color: var(--secondary-color);
+}
+
+.title, .information{
+  font-family: var(--primary-font);
+  text-shadow: 0px 0px 2px rgba(0,0,0,.2);
+  color: white;
+}
+
+.title {
+  padding-top: 2rem;
+  font-size: clamp(1.675rem,8vw,2.5rem);
+  font-weight: bold;
+  text-transform: uppercase;
+  text-align: center;
+}
+
+.information{
+  font-size: 1rem;
+  font-weight: medium;
+  text-align:left;
+  padding: 0 .5rem;
+  line-height: 2rem;
+}
+
+.btn{
+  outline: none;
+  border: none;
+  display: block;
+  border-radius: 10px;
+  font-family: var(--primary-font)
+}
+
+.btn-donate,.btn-video{
+  padding: .5em 2em;
+  text-align: center;
+  font-size: .9rem;
+  cursor: pointer;
+}
+
+.donation-overlay{
+ display: none;
+ position: fixed;
+ top: 0;
+ right:0;
+ bottom:0;
+ left: 0;
+ background: rgba(0,0,0,.5);
+}
+
+.donation-container{
+  position: absolute;
+  width: 90%;
+  max-width: 25rem;
+  top: 40%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+  border-radius: 10px;
+  background: white;
+}
+
+.donation-container i{
+  position: absolute;
+  right: 0;
+  font-size: 2rem;  
+  color: var(--event-color);
+  cursor: pointer;
+}
+
+#donation-form{
+  display: flex;
+  font-family: var(--primary-font);
+  flex-direction: column;
+  align-items: center;
+  padding-top: 3rem
+}
+
+#donation-form label{
+  color: var(--footer-color);
+  font-size: 1.2rem
+}
+
+#donation-form input{
+  outline: none;
+  border: .1rem solid var(--footer-color);
+  border-radius: 10px;
+  padding: .5rem 1rem
+}
+
+#donation-form input::placeholder{
+  font-size: .675rem;
+  text-align: center;
+}
+
+.disclaimer{
+  width: 75%;
+  margin: 0 auto;
+  padding:2rem 0;
+  font-size: .675rem;
+  font-weight: bold;
+  line-height: 1rem;
+  font-family: var(--primary-font);
+  color: var(--secondary-color)
+}
+
+.disclaimer span{
+  color: var(--event-color);
+}
+
+/*To get rid of the spinner */
+#donation-form input[type="number"]::-webkit-inner-spin-button,
+#donation-form input[type="number"]::-webkit-outer-spin-button{
+  -webkit-appearance: none;
+  -moz-appearance:textfield;  
+}
+
+#donation-form input[type=number] {
+  -moz-appearance:textfield; /* Firefox */
+}
+/*To get rid of the spinner */
+
+.donation-container button{
+  background: var(--footer-color);
+  margin-top: 2rem;
+}
+
+/* === Header Section Start === */
+.header{
+  display: flex;
+  flex-wrap: wrap;
+  font-size: 1.25rem;
+  background: var(--primary-color);
+  flex-direction: column;
+  color: white;
+}
+
+.logo-container{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-bottom: .5rem;
+}
+
+.logo-img{
+  display: none;
+}
+
+.hamburger-menu{
+  padding: .5rem 1rem;
+  font-size: 2.5rem;
+  cursor: pointer;
+}
+
+.navigation-menu{
+  display: none;
+}
+
+.list{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.nav-item{
+  padding: 1em 0;
+  width: 100%;
+}
+
+.nav-links{
+  display: block;
+  position: relative;
+  font-family: var(--primary-font);
+  font-weight: bold;
+  font-size: 1.1rem;
+  width: 100%;
+  color:white;
+  text-align: center;
+}
+
+.header .btn-donate{
+  padding: .5em 1em;
+  margin: 0 auto;
+  font-size: 1.2rem;
+}
+
+.btn-donate{
+  color: white;
+  background: var(--secondary-color);
+}
+
+.btn-donate:hover,.btn-donate:focus{
+  background: hsl(148,64%,45%)
+}
+
+/* === Header Section End === */
+
+/* ==== Homepage Start ==== */
+/* === Mission Section Start === */
+.mission-section{
+  padding-top: 2rem;
+  background: url(/images/Mobile_Version\(Homepage\).svg);
+  background-size: cover;
+  display: grid;
+  grid-template-columns: repeat(5,1fr);
+  grid-template-rows: auto;
+  grid-template-areas: 
+    "image-grid image-grid image-grid image-grid image-grid"
+    "title title title title title"
+    "mission mission mission mission mission" 
+    "buttons buttons buttons buttons buttons"
+  ;
+  align-items: center;
+}
+
+.mission-section .image-grid{
+  grid-area: image-grid;
+  display: grid;
+  grid-template-columns: repeat(2,8rem);
+  grid-template-rows: repeat(2,8rem);
+  gap: .5rem;
+  justify-content: center;
+}
+
+.mission-section .image-grid img{
+  width: 100%;
+  height: 100%;
+  box-shadow: 0 2px 2px 2px rgba(0,0,0,.3);
+}
+
+.mission-section .title{
+  grid-area: title;
+  padding-bottom: 1rem;
+}
+
+.mission-section .mission-container{
+  display: flex;
+  grid-area: mission;
+  height: 20rem;
+  width: 95%;
+  margin: 0 auto;
+}
+
+.mission-section .mission-container .mission-description{
+  padding: 1rem;
+  height: 20rem;
+  flex-grow: 1;
+  overflow: auto;
+  border: .1rem solid var(--secondary-color);
+  border-radius: 10px;
+}
+
+.mission-section .mission-container .mission-description span{
+  color: var(--secondary-color);
+  font-weight: bold;
+  text-shadow: 1px 0px rgba(0,0,0,.3);
+}
+
+.mission-section .mission-buttons{
+  margin: 1rem 0;
+  padding: 1rem;
+  grid-area: buttons;
+  min-height: 5rem;
+  display: flex;
+  justify-content: center;
+}
+
+.mission-buttons button{
+  margin: 0 1rem
+}
+
+.mission-buttons .btn-video{
+  color: var(--complimentary-color);
+  background: none;
+  border: .1rem solid var(--complimentary-color)
+}
+
+/* === Mission Section End === */
+
+/* === Sai Pandian Section Start === */
+.sai-pandian{
+  background: url(/images/Mobile_Version\(Sai_Pandian\).svg);
+  background-size: cover;
+  display: grid;  
+  padding: 2rem 0;
+  grid-template-columns:repeat(5,1fr);
+  grid-template-rows: auto;
+  grid-template-areas:
+    "image image image image image"
+    "title title title title title"
+    "description description description description description "
+  ;
+}
+
+.sai-pandian-image{
+  grid-area: image;
+  width: 75%;
+  max-width: 20rem;
+  margin: 0 auto;
+}
+
+.sai-pandian-image img{
+  width: 100%;
+  height: 12rem;
+  border-radius: 10px;
+  box-shadow: 0 2px 2px 2px rgba(0,0,0,.3);
+}
+
+.sai-pandian .title{
+  width: 75%;
+  grid-area: title;
+  margin: 0 auto;
+  line-height: 2.2rem;
+  word-spacing: .2rem;
+  padding-bottom: 2rem;
+}
+
+.sai-pandian .sai-pandian-description{
+  grid-area: description;
+  padding: 0 1rem;
+  line-height: 2rem;
+  word-spacing: .2rem;
+}
+
+.sai-pandian .sai-pandian-description span{
+  color: var(--secondary-color);
+  font-weight: bold;
+}
+
+/* === Sai Pandian Section Start === */
+/* ==== Homepage End ==== */
+
+/* ==== About Page Start ==== */
+.about-us{
+  padding-bottom: 3rem;
+  background: url(/images/Mobile_Version\(About_Us\).svg);
+}
+
+.about-us .member-container{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 2rem;
+}
+
+.about-us .member-container{
+  font-family: var(--primary-font);
+  padding-top: 1rem;
+  text-align: center;
+}
+
+.about-us .member-container .name{
+  padding-top: 1rem;
+  color: var(--complimentary-color);
+  font-size: 1.675rem;
+}
+
+.about-us .member-container .role{
+  padding-top: .5rem;
+  color: var(--secondary-color);
+  font-size: 1.2rem;
+}
+
+.about-us .member-container .bio{
+  text-align: left;
+  padding: 1rem;
+  color: white;
+  font-size: .9rem;
+  line-height: 1.3rem;
+  max-width: 90%;
+}
+
+.about-us .member-container .profile img{
+  width:11rem;
+  height: 11rem;
+  border-radius: 50%;
+  object-fit:cover;
+}
+/* ==== About Page End ==== */
+
+/* ==== Event Page Start ====*/
+.event-body{
+  background: var(--primary-color);
+}
+
+.event-section,.current-event-section{
+  margin: 2rem auto;
+  width: 95%;
+  background: rgba(0,0,0,.5);
+  border-radius: 10px;
+}
+
+.event-title{
+  font-family: var(--primary-font);
+  font-size: 1.5rem;
+  color: white;
+  text-transform: uppercase;
+  letter-spacing: .2rem;
+  padding: 1rem 0 1rem 1rem;
+}
+
+.event-grid,.current-event-grid{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.event-grid .event-tile,.current-event-grid .current-event-tile{
+  min-width: 15rem;
+  max-width: 60%;
+  margin-bottom: 2rem;
+}
+
+.event-img img, .current-event-img img{
+  width: 100%;
+  object-fit:cover;
+  border-top-left-radius: 1rem;
+  border-top-right-radius: 1rem;
+  margin-bottom: -.3rem;
+}
+
+.event-tile .know-more,.current-event-tile .current-know-more{
+  background: var(--event-color);
+  color: white;
+  font-family: var(--primary-font);
+  font-weight: bold;
+  padding: 1rem;
+  text-align: center;
+  border-bottom-left-radius: 1rem;
+  border-bottom-right-radius: 1rem;
+  cursor: pointer;
+}
+
+.event-tile .know-more:hover,.current-event-tile .current-know-more:hover{
+  background: hsl(350,98%,45%)
+}
+
+.popup-overlay,.current-popup-overlay{
+  display: none;
+  top: 0;
+  right:0;
+  bottom:0;
+  left: 0;
+  background: rgba(0,0,0,.5);
+}
+
+.popup-overlay .event-information,
+.current-popup-overlay .current-event-information{
+  position: absolute;
+  width: 90%;
+  max-width: 25rem;
+  top: 40%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+  border-radius: 10px;
+  background: white;
+  padding-bottom: 2rem;
+}
+
+.popup-overlay .event-information .event-img,
+.current-popup-overlay .current-event-information .current-event-img{
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+.popup-overlay .event-information .event-img img,
+.current-popup-overlay .current-event-information .current-event-img img{
+  border-radius: 5px;
+  width: 50%;
+  margin-top: 1rem;
+}
+
+.popup-overlay .event-information .event-description,
+.current-popup-overlay .current-event-information .current-description{
+  font-family: var(--primary-font);
+  font-size: 1rem;
+  letter-spacing: 1px;
+  line-height: 1.2rem;
+  width: 90%;
+  height: 10rem;
+  flex-grow: 1;
+  overflow: auto;
+  margin: 1rem auto 1rem auto;
+  padding: 1rem;
+}
+
+.btn-close{
+  margin: 0 auto;
+  padding: 1em;
+  background: var(--footer-color);
+  color: white;
+}
+
+.show-details{
+  display: block;
+  position: fixed;
+}
+/* === Footer Section Start === */
+
+
+/* === Footer Section Start === */
+.footer{
+  background: url(/images/Mobile_Version\(Footer\).svg);
+  background-size: cover;
+  display: grid;
+  grid-template-columns: repeat(4,1fr);
+  grid-template-rows: 8rem;
+  grid-template-areas: 
+  "logo logo logo logo"
+  "stats stats stats stats"
+  "contact contact contact contact"
+  "social-media social-media social-media social-media"
+  "copyright copyright copyright copyright"
+  ;
+  padding-bottom: 2rem;
+}
+
+.footer .logo{
+  grid-area: logo;
+  padding-top: 2rem;
+  font-size: 1.1rem;
+  line-height: 2.5rem;
+}
+
+.footer .stats{
+  grid-area: stats;
+  font-family: var(--primary-font);
+  color: var(--complimentary-color);
+  font-size: 1.1rem;
+  padding: 0 1rem;
+  line-height: 1.5rem;
+  width: 75%;
+}
+
+.footer .contact-form{
+  grid-area: contact;
+  display: flex;
+  flex-direction: column;
+  color: var(--footer-color);
+  background: white;
+  height: 12rem;
+  min-width: 15rem;
+  width: 50%;
+  font-family: var(--primary-font);
+  justify-self: center;
+  align-items: center;
+  border-radius: 10px;
+  padding-bottom: 5rem;
+  margin-top: 1.5rem;
+}
+
+.contact-form .label{
+  padding: 1.5rem .5rem;
+  font-size: 1.5rem;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+.contact-form input{
+  border: none;
+  border-bottom: .1rem solid var(--footer-color);
+  color: var(--footer-color);
+  outline: none;
+  margin-bottom: 1rem;
+  width: 10rem;
+}
+
+.contact-form input::placeholder{
+  font-family: var(--primary-font);
+  font-size: .7rem;
+  text-align: center;
+}
+
+.btn-send{
+  background: var(--footer-color);
+  color: white;
+  padding: 1em;
+  font-size: .7rem;
+  margin: .5rem 0
+}
+
+.footer .social-media-links{
+  grid-area: social-media;
+  margin-top: 1.5rem;
+  justify-self: center;
+  font-size: 2.5rem;
+  color: var(--complimentary-color);
+  justify-content: space-evenly;
+}
+
+.footer .social-media-links i{
+  padding: .5rem;
+  cursor: pointer;
+}
+
+.footer .social-media-links i:hover,
+.footer .social-media-links i:focus{
+  color: var(--secondary-color);
+}
+
+.footer .copyright{
+  margin-top: 1rem;
+  grid-area: copyright;
+  font-family: var(--primary-font);
+  font-weight: bold;
+  font-size: .5rem;
+  color: white;
+  justify-self: center;
+  text-align: center;
+}
+
+/* === Footer Section End === */
+
+.show{
+  display: block;
+}
+
+
+@media(min-width: 640px){
+  /* === common === */
+  .title{
+    font-size: clamp(2rem,15vw,2.5rem);
+  }
+
+  .information{
+    font-size: clamp(1.1rem,5vw,1.3rem);
+  }
+
+  /* === Header Section Start === */
+  .header{
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+  }
+
+  .header .logo-container .hamburger-menu{
+    display: none;
+  }
+
+  .header .logo-container{
+    width: 20%;
+    display: flex;
+    justify-content: center;
+  }
+
+  .header .logo{
+    padding:0;
+    font-size: .65rem;
+    line-height: 1rem;
+  }
+
+  .header .logo .dot{
+    font-size: 2.5rem;
+    color: var(--secondary-color);
+  }
+
+  .header .logo-img{
+    display: block;
+    width: 3rem;;
+  }
+
+  .header .navigation-menu{
+    display: block;
+    width: 75%;
+  }
+
+  .list{
+    flex-direction: row;
+    justify-content: space-evenly;
+  }
+
+  .btn-donate{
+    margin: 0 1rem;
+  }
+
+  /* ==== Homepage Start ==== */
+  /* === Mission Section Start === */
+  .mission-section{
+    background: url(/images/Tablet_Version\(Homepage\).svg);
+    grid-template-columns: repeat(10,1fr);
+    grid-template-areas: 
+      "title title title title  ... ... image-grid image-grid image-grid image-grid"
+      "mission mission mission mission mission mission image-grid image-grid image-grid image-grid"
+      "mission mission mission mission mission mission image-grid image-grid image-grid image-grid" 
+      "buttons buttons buttons buttons buttons buttons buttons buttons buttons buttons "
+    ;
+    column-gap: -10rem;
+  }
+
+  .mission-section .title{
+    font-size: clamp(2rem,15vw,3rem);
+    padding-left: 3rem;
+    line-height: 4rem;
+    width: 20rem;
+    text-align: left;
+  }
+
+  .mission-section .image-grid{
+    grid-template-columns: repeat(2,8rem);
+    grid-template-rows: repeat(2,8rem);
+    gap: .5rem;
+    justify-content: center;
+  }
+
+
+  .mission-section .mission-container .mission-description{
+    margin: 0 1rem;
+    border: .1rem solid var(--secondary-color);
+    border-radius: 10px
+  }
+
+  .btn-donate,.btn-video{
+    padding: .5em 2em;
+    text-align: center;
+    font-size: 1.2rem;
+    cursor: pointer;
+  }
+
+  /* === Mission Section End === */
+
+  /* === Sai Pandian Section Start === */
+  .sai-pandian{
+    background: url(/images/Tablet_Version\(Sai_Pandian\).svg);
+    background-size: cover;
+    grid-template-columns: repeat(6,1fr);
+    grid-template-areas:
+      "title title ... image image image"
+      "title title ... description description description"
+      "title title ... description description description "
+    ;
+  }
+
+  .sai-pandian-image img{
+    margin-right: 1rem;
+  }
+  .sai-pandian .title{
+    align-self: center;
+    width: 100%;
+    margin: 0;
+    margin-left: 3rem;
+    text-align: left;
+    line-height: 4rem;
+    word-spacing: .2rem;
+    padding-bottom: 0;
+  }
+
+  .sai-pandian-description .information{
+    color: var(--footer-color);
+    font-size: clamp(1.1rem,5vw,1.2rem);
+    margin-right: 1rem;
+  }
+
+  .sai-pandian .sai-pandian-description span{
+    color: var(--primary-color);
+    text-shadow: 1px 0 rgba(0,0,0,.5);
+  }
+
+  /* === Sai Pandian Section End === */
+  /* ==== Homepage End ==== */
+
+  /* === About Page Start ===*/
+  .about-us{
+    background: url(/images/Tablet_Version\(About_Us\).svg);
+    background-size: cover;
+  }
+
+  .about-us .member-container{
+    display: grid;
+    grid-template-columns: repeat(7,1fr);
+    grid-template-rows: 20rem;
+    grid-template-areas: 
+      "picture picture picture bio bio bio bio"
+      "picture picture picture bio bio bio bio"
+    ;
+  }
+
+  .about-us .member-container .profile{
+    grid-area: picture;
+  }
+
+
+  .about-us .member-container .bio{
+    grid-area: bio;
+    max-width: 100%;
+    font-size: 1rem;
+  }
+
+  /* ==== About Us Page End ==== */
+
+  /* ==== Event Page Start ==== */
+  .event-title{
+    font-size: 2.25rem;
+    letter-spacing: .3rem;
+    padding: 1.5rem 0 1.5rem 2rem;
+  }
+
+  .event-grid,.current-event-grid{
+    flex-direction: row;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+  }
+
+  .event-grid .event-tile,.current-event-grid .current-event-tile{
+    width: 35%;
+    margin-bottom: 2rem;
+  }
+  /* ==== Event Page End ====*/
+  .footer{
+    background: url(/images/Tablet_Version\(Footer\).svg);
+    background-size: cover;
+    grid-template-areas: 
+    "logo logo contact contact"
+    "stats stats contact contact"
+    "stats stats contact contact"
+    "social-media social-media contact contact"
+    "copyright copyright copyright copyright"
+    ;
+  }
+
+  .footer .logo{
+    padding-left: 2rem;
+    font-size: 1.3rem;
+    line-height: 2.8rem;
+  }
+
+  .footer .stats{
+    font-size: 1.2rem;
+    padding: 1rem 0 1rem 2rem;
+    line-height: 2rem;
+    width: 100%;
+  }
+
+  .footer .contact-form{
+    align-self: center;
+    margin-top: 2rem;
+  }
+
+  .footer .social-media-links{
+    padding-left: 2rem;
+    justify-self: start;
+    margin-top: -.5rem;
+  }
+
+  .footer .copyright{
+    margin-top: 3rem;
+  }
+
+  /* === Footer Section End === */
+}
+
+@media (max-width: 668px) and (min-width: 640px){
+  .mission-section .image-grid{
+    grid-template-columns: repeat(2,7rem);
+    grid-template-rows: repeat(2,7rem);
+    gap: .5rem;
+    justify-content: center;
+  }
+
+}
+@media(min-width: 1024px){
+  /*=== Common Section ===*/
+  .mission-section .title,.sai-pandian .title{
+    font-size: clamp(1rem,15vw,4rem);
+    padding-left: 3rem;
+    line-height: 6rem;
+    padding-top: 3rem;
+  }
+
+  /* === Header Section Start === */
+  .header .logo{
+    font-size: .8rem;
+    line-height: 1.5rem;
+  }
+
+  .header .logo .dot{
+    font-size: 3.5rem;
+  }
+
+  .nav-links{
+    font-size: 1.5rem;
+  }
+
+  .list .btn{
+    font-size: 1.5rem;
+  }
+
+  
+  /* ==== Homepage Start ==== */
+  /* === Mission Section Start ===*/
+  .mission-section{
+    background: url(/images/Desktop_Version\(Homepage\).svg);
+  }
+
+  
+  .mission-section .image-grid{
+    grid-template-columns: repeat(2,12rem);
+    grid-template-rows: repeat(2,12rem);
+  }
+  /* === Mission Section End ===*/
+
+  /* === Sai Pandian Section Start === */
+  .sai-pandian{
+    background: url(/images/Desktop_Version\(Sai_Pandian\).svg);
+    background-size: cover;
+  }
+
+  .sai-pandian-description{
+    width: 75%;
+    margin: 0 auto;
+  }
+
+  .sai-pandian-description .information{
+    padding-top: 2rem;
+    font-size: clamp(1.1rem,5vw,1.3rem);
+  }
+  /* === Sai Pandian Section End === */ 
+  /* ==== Homepage End ==== */
+  
+  /* === About Us Page Start ===*/ 
+  .about-us .member-container{
+    grid-template-rows: 25rem;
+  }
+
+  .about-us .member-container .bio{
+    font-size: 1.25rem;
+    line-height: 1.75rem;
+    max-width: 75%;
+  }
+
+  .about-us .member-container .profile img{
+    width:15rem;
+    height: 15rem;
+  }
+
+  .about-us .member-container .name{
+    font-size: 2rem;
+  }
+
+  .about-us .member-container .role{
+    font-size: 1.5rem;
+  }
+  /* === About Page End ===*/
+
+  /* ==== Event Page Start ====*/
+  .event-title{
+    font-size: 3rem;
+    letter-spacing: .4rem;
+    padding: 2rem 0 2rem 3rem;
+  }
+
+  .event-grid .event-tile,.event-grid .event-tile,.current-event-grid .current-event-tile{
+    width: 30%;
+    margin-bottom: 3rem;
+  }
+  /* ==== Event Page End ====*/
+
+  /* === Footer Section Start ===*/
+  .footer{
+    background: url(/images/Desktop_Version\(Footer\).svg);
+    background-size: cover;
+  }
+
+  .footer .logo{
+    padding-left: 5rem
+  }
+  /* === Footer Section End ===*/
+  .footer .stats{
+    padding-left: 5rem;
+  }
+
+  .footer .social-media-links{
+    padding-left: 4rem;
+  }
+}

@@ -1,0 +1,21 @@
+<%- include('partials/header.ejs') %> 
+
+<body>
+  <%- include('partials/navbar.ejs') %> 
+  <%- include('partials/checkout.ejs') %>
+  <section class="about-us">
+    <h1 class="title">Our Founding Team</h1>
+    <div class="members"></div>
+
+    <template class="member-making-template">
+      <div class="member-container">
+        <div class="profile">
+          <img src="#" data-profile-image>
+          <h2 class="name" data-name></h2>
+          <h3 class="role" data-role></h3>
+        </div>
+        <p class="bio" data-bio></p>
+    </template> 
+  </section>
+
+  <%- include('partials/footer.ejs') %> 
