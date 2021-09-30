@@ -534,7 +534,7 @@
   display: block;
   position: fixed;
 }
-/* === Footer Section Start === */
+/* === Event Page End === */
 
 
 /* === Footer Section Start === */
@@ -615,7 +615,9 @@
   color: white;
   padding: 1em;
   font-size: .7rem;
-  margin: .5rem 0
+  margin: .5rem 2rem;
+  text-align: center;
+  cursor: pointer;
 }
 
 .footer .social-media-links{

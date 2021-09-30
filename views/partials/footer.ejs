@@ -10,9 +10,17 @@
 
   <div class="contact-form">
     <label class="label">Contact Us</label>
-    <input type="email" name="email" class="email" placeholder="name @email.com">
-    <input type="text" name="email" class="email" placeholder="write your message here">
-    <button class="btn btn-send">Send Message</button>
+    <form action="https://formspree.io/f/mjvjzgvq" method="POST">
+      <div>
+        <input type="email" name="email" class="email" placeholder="name@email.com">
+      </div>
+      
+      <div>
+        <input type="text" name="message" class="email" placeholder="write your message here">
+      </div>
+
+      <button class="btn btn-send">Send Message</button>
+    </form>
   </div>
 
   <div class="social-media-links">
