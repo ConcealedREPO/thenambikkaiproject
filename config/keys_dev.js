@@ -1,4 +1,0 @@
-module.exports={
-  stripePublishableKey:"pk_live_51IggclBMcPcnI8qp7HJtX7QXE4B6KHf0izXlHCEsD1IrNwauaKk97R7BfpeBy8yZoo1QoTHHz4hTsgeyLLowg5bU00XkAn93e2",
-  stripeSecretKey:"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"
-}
